@@ -1,0 +1,41 @@
+{
+  "name": "what-grinds-my-gears",
+  "version": "1.0.0",
+  "description": "Anonymous chat (and calling?) to connect to a volunteer network for discussion on personal/professional problems.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec ./node_modules/.bin/babel-node ./index.js",
+    "debug": "set DEBUG=* & nodemon --exec ./node_modules/.bin/babel-node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opensystemsco/what-grinds-my-gears.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "socket.io",
+    "react",
+    "problem",
+    "opensystems.co"
+  ],
+  "author": "Shahrukh Malik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opensystemsco/what-grinds-my-gears/issues"
+  },
+  "homepage": "https://github.com/opensystemsco/what-grinds-my-gears#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "save": "^2.4.0",
+    "socket.io": "^4.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-node": "^0.0.1-security",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
