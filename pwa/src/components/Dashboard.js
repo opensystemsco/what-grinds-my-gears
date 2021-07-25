@@ -1,11 +1,11 @@
 import React from 'react'
-import Sidebar from './Sidebar'
+import { useMediaQuery } from 'react-responsive'
+import ComputerLayout from './ComputerLayout'
 
 export default function Dashboard({userID}) {
-    return (
-        <div className='d-flex' style={{ height: '100vh' }}>
-            <Sidebar userID={userID} />
-        </div>
+    const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
 
+    return (
+        isTabletOrMobile ? <div>Phone layout</div> : <ComputerLayout userID={userID} />
     )
 }

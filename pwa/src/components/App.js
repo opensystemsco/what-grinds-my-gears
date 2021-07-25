@@ -1,13 +1,19 @@
-import React from 'react';
-import Login from './Login';
+import React, {useEffect}  from 'react';
 import Dashboard from './Dashboard';
 import useLocalStorage from '../hooks/useLocalStorage';
+import {v4 as uuid } from 'uuid';
 
 function App() {
   const [userID, setID] = useLocalStorage('userID');
 
+  useEffect(() => {
+    if(!userID){
+      setID(uuid());
+    }
+  }, [userID, setID])
+
   return (
-    userID ? <Dashboard userID={userID} /> : <Login onIDSubmit={setID}/>
+    <Dashboard userID={userID} />
   );
 }
 
